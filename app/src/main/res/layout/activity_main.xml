@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/msin"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inputbutton"
+        android:text="上鎖"
+        android:textColor="#707070"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782" />
+
+    <TextureView
+        android:id="@+id/view_finder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="700dp"
+        android:layout_height="500dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19">
+
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="290dp"
+            android:layout_height="500dp"
+            android:background="@drawable/main_button"
+            android:drawableTop="@drawable/scaniconxhdpi"
+            android:paddingTop="60dp"
+            android:text="掃描條碼"
+            android:textColor="#666666"
+            android:textSize="49sp" />
+
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="290dp"
+            android:layout_height="500dp"
+            android:layout_marginLeft="58dp"
+            android:background="@drawable/main_button"
+            android:drawableTop="@drawable/packageiconxhdpi"
+            android:paddingTop="60dp"
+            android:text="取貨"
+            android:textColor="#666666"
+            android:textSize="49sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
