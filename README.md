@@ -1,1 +1,2 @@
-# Aubox郵箱-平板端操作介面(Android)
+# 收Goods-Aubox(平板端介面)
+## 專題目的
