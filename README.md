@@ -24,7 +24,7 @@
 (2)取貨: 使用者要取貨時，點擊可跳轉至取貨畫面(主要用來家中若有多名使用者的便利性及安全性)。<br>
 (3)上鎖: 當送貨員將貨物放入後，關上門需點擊上鎖，才會自動鎖上。 <br>
 
-<div align=center> <img  src=https://github.com/WuJammy/my_project_aubox_android/blob/master/image/scan_interface.png/> </div>
+<div align=center> <img  src=/> </div>
 <p align="center">掃描頁面</p>
 
 
