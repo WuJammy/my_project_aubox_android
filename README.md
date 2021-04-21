@@ -38,4 +38,4 @@
 1. [Android Studio](https://developer.android.com/studio)  <br> 
 ### (3) 視訊的實現
 ### (4) 掃描QR Code的實現
-### (5) 串接的實現
+### (5) 串接API的實現
