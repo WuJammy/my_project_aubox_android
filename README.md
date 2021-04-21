@@ -16,13 +16,13 @@
 (4) 繼電器 <br>
 (5) 電子鎖 <br>
 ## (四)平板端介面
-![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/image/interface.png)
+<div align=center>![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/image/interface.png)</div>
 <p align="center">主頁面</p>
 
 功能:
-(1)
-(2)
-(3)
+(1)掃描條碼: 當貨物送達時，送貨員點擊此可跳至掃描畫面  <br>
+(2)取貨: 使用者要取貨時，點擊可跳轉至取貨畫面(主要用來家中若有多名使用者的便利性及安全性)。
+(3)上鎖: 當送貨員將貨物放入後，關上門需點擊上鎖，才會自動鎖上。
 
 
 ![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png)
