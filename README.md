@@ -30,8 +30,8 @@
 
 
 
-![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png)
-<p align="center">圖2: 簡易流程圖</p>
+<div align=center> <img  src=https://github.com/WuJammy/my_project_aubox_android/blob/master/image/take_interface.png/> </div>
+<p align="center">取貨頁面</p>
 
 
 ### (2) 開發工具及使用的技術
