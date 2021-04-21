@@ -16,8 +16,14 @@
 (4) 繼電器 <br>
 (5) 電子鎖 <br>
 ## (四)平板端介面
-![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png)
-<p align="center">圖2: 簡易流程圖</p>
+![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/image/interface.png)
+<p align="center">主頁面</p>
+
+功能:
+(1)
+(2)
+(3)
+
 
 ![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png)
 <p align="center">圖2: 簡易流程圖</p>
