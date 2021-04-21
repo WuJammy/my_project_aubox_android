@@ -35,10 +35,10 @@
 
 
 ### (2) 開發工具及使用的技術
-1. [Android Studio](https://developer.android.com/studio)  <br> 
-2. [Agora](https://www.agora.io)  <br> 
-3. [Zxing](https://github.com/zxing/zxing)  <br>
-4. [OkHttp](https://square.github.io/okhttp/)  <br>
+ [1. Android Studio](https://developer.android.com/studio)  <br> 
+ [2. Agora](https://www.agora.io)  <br> 
+ [3. Zxing](https://github.com/zxing/zxing)  <br>
+ [4. OkHttp](https://square.github.io/okhttp/)  <br>
 ### (3) 視訊的實現
 ### (4) 掃描QR Code的實現
 ### (5) 串接API的實現
