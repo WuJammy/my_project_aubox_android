@@ -49,8 +49,105 @@
  [3. Zxing](https://github.com/zxing/zxing)  <br>
  [4. OkHttp](https://square.github.io/okhttp/)  <br>
 ### (3) 視訊的實現
+採用[Agora](https://www.agora.io)的技術進行實現。
 
+#### 簡易建構視訊(詳細資料請參考[Agora](https://www.agora.io))
 
+1. 開始視訊時，要先設定好本地端的影像，並加入視訊頻道中待命。
+```java
+private void startCall() {
+        setupLocalVideo();
+        joinChannel();   
+        }
+```
+
+```java
+ private void setupLocalVideo() {
+        mLocalView = RtcEngine.CreateRendererView(getBaseContext());
+        mLocalView.setZOrderMediaOverlay(true);
+        mLocalContainer.addView(mLocalView);
+        mRtcEngine.setupLocalVideo(new VideoCanvas(mLocalView, VideoCanvas.RENDER_MODE_HIDDEN, 0));
+    }
+```
+
+```java
+ private void joinChannel() {
+        mRtcEngine.joinChannel(null, "demo", "Extra Optional Data", 0);}
+```
+    
+2. 此時若另一方也準備要與你視訊時，對方也要加入同一個視訊頻道，同時開始渲染遠端傳過來的畫面，若成功連接便可開始視訊。
+```java
+private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
+        @Override
+        public void onUserJoined(final int uid, int elapsed ) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    setupRemoteVideo(uid);
+                }
+            });
+        }
+           @Override
+        public void onUserOffline(final int uid, int reason) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    onRemoteUserLeft();
+                }
+            });
+        }
+    };
+```
+
+```java
+private void setupRemoteVideo(int uid) {
+        mRemoteView = RtcEngine.CreateRendererView(getBaseContext());
+        mRemoteContainer.addView(mRemoteView);
+        mRtcEngine.setupRemoteVideo(new VideoCanvas(mRemoteView, VideoCanvas.RENDER_MODE_HIDDEN, uid));
+        mRemoteView.setTag(uid);
+    }
+```
+
+```java
+private void onRemoteUserLeft() {
+        removeRemoteVideo();
+    }
+```
+
+```java
+ private void removeRemoteVideo() {
+        if (mRemoteView != null) {
+            mRemoteContainer.removeView(mRemoteView);
+        }
+        mRemoteView = null;
+    }
+```
+
+3. 當結束視訊後，便可將本地及遠端畫面關閉，同時離開視訊的頻道。
+```java
+ private void endCall() {
+        removeLocalVideo();
+        removeRemoteVideo();
+        leaveChannel();
+    }
+```
+
+```java
+ private void removeLocalVideo() {
+        if (mLocalView != null) {
+            mLocalContainer.removeView(mLocalView);
+        }
+        mLocalView = null;
+        }
+ ```
+ 
+ ```java
+ private void leaveChannel() {
+        if(mRtcEngine!=null)
+        mRtcEngine.leaveChannel();
+    }
+ ```
+ 
 ### (4) 掃描QR Code的實現
 採用 [Zxing](https://github.com/zxing/zxing) 這個Google開放的原始碼進行實現。
 
