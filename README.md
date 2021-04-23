@@ -29,9 +29,9 @@
 <p align="center">掃描頁面</p>
 
 功能解釋: <br>
-(1)掃描條碼: 當貨物送達時，送貨員點擊此可跳至掃描畫面。  <br>
+(1)將QR Code放於鏡頭前，對準畫面的紅線，即可完成掃描。  <br>
 (2)取貨: 使用者要取貨時，點擊可跳轉至取貨畫面(主要用來家中若有多名使用者的便利性及安全性)。<br>
-(3)上鎖: 當送貨員將貨物放入後，關上門需點擊上鎖，才會自動鎖上。 <br>
+
 
 
 <div align=center> <img  src=https://github.com/WuJammy/my_project_aubox_android/blob/master/image/take_interface.png/> </div>
