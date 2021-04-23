@@ -49,7 +49,7 @@
  [3. Zxing](https://github.com/zxing/zxing)  <br>
  [4. OkHttp](https://square.github.io/okhttp/)  <br>
 ### (3) 視訊的實現
-'''java
+```java
 private void scanFrameSet() {
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);//選擇掃描qrcode
@@ -60,6 +60,7 @@ private void scanFrameSet() {
         integrator.setPrompt(" ");//最下方的提示字
         integrator.initiateScan();//初始化掃描設定
     } //掃描條碼之設定
-    
+```
+
 ### (4) 掃描QR Code的實現
 ### (5) 串接API的實現
