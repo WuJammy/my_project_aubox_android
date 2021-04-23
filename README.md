@@ -54,7 +54,7 @@
 ### (4) 掃描QR Code的實現
 採用 [Zxing](https://github.com/zxing/zxing) 這個Google開放的原始碼進行實現。
 
-#### 簡易建構(詳細資料請參考[Zxing](https://github.com/zxing/zxing))
+#### 簡易建構掃描條碼(詳細資料請參考[Zxing](https://github.com/zxing/zxing))
 1. 掃描條碼的設定
 ```java
 private void scanFrameSet() {
@@ -88,3 +88,29 @@ private void scanFrameSet() {
 ```
 
 ### (5) 串接API的實現
+採用[OkHttp](https://square.github.io/okhttp/)這個第三方套件實現。
+
+#### 簡易串接API(詳細資料請參考[OkHttp](https://square.github.io/okhttp/))
+```java
+class ifview extends Thread {
+        OkHttpClient client = new OkHttpClient();
+        Request request_ifview = new Request.Builder().url("http://120.101.8.52/aubox604/WebService1.asmx/ifvideo?boxnumber=0407").build();//串接API
+        @Override
+        public void run() {
+            client.newCall(request_ifview).enqueue(new Callback() {
+                @Override
+                public void onFailure(Request request, IOException e) {
+
+                }
+
+                @Override
+                public void onResponse(Response response) throws IOException {
+                    str_ifView = response.body().string(); //取得回傳值
+
+                }
+            });
+
+        }
+
+    }
+```
