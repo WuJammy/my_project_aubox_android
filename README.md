@@ -49,6 +49,13 @@
  [3. Zxing](https://github.com/zxing/zxing)  <br>
  [4. OkHttp](https://square.github.io/okhttp/)  <br>
 ### (3) 視訊的實現
+
+
+### (4) 掃描QR Code的實現
+採用 [Zxing](https://github.com/zxing/zxing) 這個Google開放的原始碼進行實現。
+
+#### 簡易建構(詳細資料請參考[Zxing](https://github.com/zxing/zxing))
+1. 掃描條碼的設定
 ```java
 private void scanFrameSet() {
         IntentIntegrator integrator = new IntentIntegrator(this);
@@ -59,8 +66,25 @@ private void scanFrameSet() {
         integrator.setBarcodeImageEnabled(false);
         integrator.setPrompt(" ");//最下方的提示字
         integrator.initiateScan();//初始化掃描設定
-    } //掃描條碼之設定
+    } 
+```
+2. 取得掃描結果及執行動作
+```java
+@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() == null) {
+                Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_SHORT).show();
+            } else {
+                str_qrCode = result.getContents();//取得掃描結果
+                //有關其他掃描後要執行的程式
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 ```
 
-### (4) 掃描QR Code的實現
 ### (5) 串接API的實現
