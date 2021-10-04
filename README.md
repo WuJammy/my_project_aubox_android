@@ -6,7 +6,9 @@
 ![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/structure.png)
 <p align="center">圖1: 簡易架構圖</p>
 
-![image](https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png)
+<div align=center>
+<img  src=https://github.com/WuJammy/my_project_aubox_android/blob/master/flow.png/>
+</div>
 <p align="center">圖2: 簡易流程圖</p>
 
 ## (三)郵箱的硬體設備
